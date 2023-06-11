@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv3ifhuvxeqp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d2ov4"]
+albedo_color = Color(0.207843, 0.647059, 0.239216, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_br00j"]
+albedo_color = Color(0.0117647, 0.0235294, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ciw76"]
+albedo_color = Color(0.87451, 0.164706, 0.129412, 1)
+
+[node name="test_terrain" type="Node3D"]
+
+[node name="ground" type="CSGBox3D" parent="."]
+material_override = SubResource("StandardMaterial3D_d2ov4")
+use_collision = true
+size = Vector3(64, 0.002, 64)
+
+[node name="wall4" type="CSGBox3D" parent="."]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 32.1858, 2.5, 0.0963436)
+use_collision = true
+size = Vector3(64, 6, 1)
+
+[node name="wall3" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32.1808, 2.5, 0.0964403)
+use_collision = true
+size = Vector3(64, 6, 1)
+
+[node name="wall2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -32.583)
+use_collision = true
+size = Vector3(64, 6, 1)
+
+[node name="wall1" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 32.5)
+use_collision = true
+size = Vector3(64, 6, 1)
+
+[node name="box2" type="CSGBox3D" parent="."]
+transform = Transform3D(15.2174, 0, 0, 0, 0.770345, 0, 0, 0, 27.3111, 10.8188, 0.63115, 3.42643)
+material_override = SubResource("StandardMaterial3D_br00j")
+use_collision = true
+size = Vector3(0.435052, 2.89874, 0.259794)
+
+[node name="box1" type="CSGBox3D" parent="."]
+transform = Transform3D(3.90094, 0, 0, 0, 0.877693, 0, 0, 0, 5.226, 10.2981, 0.398883, -4.76643)
+material_override = SubResource("StandardMaterial3D_ciw76")
+use_collision = true

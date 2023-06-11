@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://jmxwf3n0txy5"]
+
+[ext_resource type="Texture2D" uid="uid://duv8hs65v0uqm" path="res://Textures/grass.png" id="1_wy5ks"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_akah6"]
+albedo_texture = ExtResource("1_wy5ks")
+uv1_triplanar = true
+uv1_triplanar_sharpness = 0.6066
+
+[node name="map1" type="Node3D"]
+
+[node name="ground" type="CSGBox3D" parent="."]
+material_override = SubResource("StandardMaterial3D_akah6")
+use_collision = true
+size = Vector3(100, 0, 100)
