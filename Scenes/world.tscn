@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bahr1ko7fyx10"]
 
-[ext_resource type="PackedScene" uid="uid://cllmkep7wbu8l" path="res://Scenes/Player.tscn" id="1_4d7hk"]
 [ext_resource type="PackedScene" uid="uid://jmxwf3n0txy5" path="res://Scenes/map1.tscn" id="2_2xcw0"]
+[ext_resource type="PackedScene" uid="uid://dtxgr4ks6uwap" path="res://Scenes/PlayerTest.tscn" id="2_7cvly"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2gy0a"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -17,6 +17,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [node name="World" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0164795, 0.0947266, -0.0543213)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 2.08165e-12, 10, 2.08165e-12)
@@ -25,6 +26,6 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ltarf")
 
-[node name="Player" parent="." instance=ExtResource("1_4d7hk")]
-
 [node name="map1" parent="." instance=ExtResource("2_2xcw0")]
+
+[node name="playerTest" parent="." instance=ExtResource("2_7cvly")]
